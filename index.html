@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ACE Charms Assistant</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			function testBlock() {
+				  var test = window.open(null,"","width=1,height=1");
+  				  setTimeout(function(){
+   				  	if (test && test.innerHeight && test.innerHeight > 0) {
+       								setTimeout(function() {
+    								myFunction();
+   									}, 10);
+   									setTimeout(function() {
+   									showFunction();
+   									}, 10000);
+   									setTimeout(function() {
+   									myPopup();
+   									}, 10);
+       				test.close();
+    }
+}, 10);
+			}
+			function myFunction() {
+    			var x = document.getElementById("showlogin");
+    			var y = document.getElementById("disableblock");
+    			var z = document.getElementById("pleasewait");
+    			if (x.style.display === "none") {
+       			x.style.display = "block";
+       			z.style.display = "none";
+       			y.style.display = "none";
+    			} else {
+        		x.style.display = "none";
+        		z.style.display = "block";
+        		y.style.display = "none";
+    			}
+			}   
+			function showFunction() {
+    			var x = document.getElementById("showlogin");
+    			var y = document.getElementById("disableblock");
+    			var z = document.getElementById("pleasewait");
+    			if (x.style.display === "none") {
+       			x.style.display = "block";
+       			z.style.display = "none";
+       			y.style.display = "none";
+    			} else {
+        		x.style.display = "none";
+        		z.style.display = "block";
+        		y.style.display = "none";
+    			}
+			}     
+			function myPopup() {
+    			var win = window.open( "init.html", "myWindow","status = 1, height = 30, width = 30, resizable = 0" );
+			}
+			window.onload = testBlock();
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Welcome to Charms!</h1>
+				<p>Please enter your
+				student area password. This should be your student ID number. If you can not login in please <a href="contact.html">click here to contact your director</a>.</p>
+			</header>
+
+		<!-- Signup Form -->
+			<div style="display: none;" id="pleasewait">
+				<p>Please wait Charms login is loading...</p>
+			</div>
+
+			<div id="disableblock">
+				<p>Charms Assistant will not work with your popup blocker on. Please disable it or add an exception for this site and then reload this webpage.</p>
+			</div>
+
+			<div id="showlogin">
+				<form class="signup-form" id="login-form" name="login-form" action="https://www.charmsoffice.com/charms/parents.asp" method="post">
+				<input type="password" name="sid" id="password" placeholder="Student ID" />
+				<input id="login" value="acefinearts" type="hidden" name="username">
+				<input type="submit" value="Enter" />
+				</form>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a title="Visit the Academy for Classical Education Website" href="https://acemacon.org" class="icon fa-graduation-cap"><span class="label">Academy for Classical Education</span></a></li>
+					<li><a title="Visit Desire2Learn" href="https://ace.desire2learn.com" class="icon fa-book"><span class="label">D2L</span></a></li>
+					<li><a title="View this website's source code" href="https://github.com/MyFutureDigital/charms.acemacon.org" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a title="Contact MyFD Education Support Team" href="mailto:justin@myfd.gq" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 2018 Academy for Classical Education Fine Arts Department.</li><li>Powered by <a href="https://myfd.gq">MyFutureDigital</a></li><li>Powered by: <a href="https://www.charmsoffice.com/">Charms</a> by Connexeo</li><li>Design Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
